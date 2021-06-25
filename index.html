@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXTRAS</title>
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- AOS link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+      <!-- =====Pre-Loader===== -->
+      <div id="loader-container"></div>
+
+    <!-- Scroll button -->
+    <div class="hero" >
+        <a class="scroll-down" onclick="window.location.href='#aim'">
+            <div class="mouse">
+                <span></span>
+            </div>
+            <div class="arrow">
+                <span></span>
+            </div>
+        </a>
+    </div>
+
+    <!-- Title -->
+    <div class="container demo">
+        <h1 class="main-title">IITH | EXTRAS</h1>
+    </div>
+
+    <!-- About Us -->
+    <div id="aim">
+        <h3>OUR AIM</h3>
+        <div data-aos="fade-down">
+            <div class="aim-content">
+                <p>We at IIT Hyderabad work towards the development of the individuals. We highly encourage our students
+                    to follow their hobbies with full passion and dedication.We strongly believe that doing what you like helps you in overall
+                    development and it also helps you to find a better version of yourself. So here we are show-casing
+                    the brilliant talents of individuals of <br>IIT Hyderabad.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div id="main">
+        <div class="talent">
+            <h3>PRESENTING</h3><br>
+        </div>
+        <p class="talent">INCREDIBLE TALENTS OF IITH</p>
+        <div class="cards">
+            <div data-aos="fade-right">
+                <div class="t1">
+                    <span>NAME : XYZ</span><br>
+                    <span>YEAR : 3rd Year</span><br>
+                    <span>TALENT : Dance</span>
+                </div>
+            </div>
+            <div data-aos="fade-left">
+                <div class="t1">
+                    <span>NAME : ABC</span><br>
+                    <span>YEAR : 2nd Year</span><br>
+                    <span>TALENT : Music</span>
+                </div>
+            </div>
+            <div data-aos="fade-right">
+                <div class="t1">
+                    <span>NAME : ABC</span><br>
+                    <span>YEAR : 2nd Year</span><br>
+                    <span>TALENT : Music</span>
+                </div>
+            </div>
+            <div data-aos="fade-left">
+                <div class="t1">
+                    <span>NAME : ABC</span><br>
+                    <span>YEAR : 2nd Year</span><br>
+                    <span>TALENT : Music</span>
+                </div>
+            </div>
+            <div data-aos="fade-right">
+                <div class="t1">
+                    <span>NAME : ABC</span><br>
+                    <span>YEAR : 2nd Year</span><br>
+                    <span>TALENT : Music</span>
+                </div>
+            </div>
+            <div data-aos="fade-left">
+                <div class="t1">
+                    <span>NAME : XYZ</span><br>
+                    <span>YEAR : 3rd Year</span><br>
+                    <span>TALENT : Dance</span>
+                </div>
+            </div>
+            <div data-aos="fade-right">
+                <div class="t1">
+                    <span>NAME : XYZ</span><br>
+                    <span>YEAR : 3rd Year</span><br>
+                    <span>TALENT : Dance</span>
+                </div>
+            </div>
+            <div data-aos="fade-left">
+                <div class="t1">
+                    <span>NAME : XYZ</span><br>
+                    <span>YEAR : 3rd Year</span><br>
+                    <span>TALENT : Dance</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+<script>
+    // AOS scripts
+    AOS.init();
+
+    // Preloader scripts
+    const id$ = (id) => document.getElementById(id);
+    const q$ = (query) => document.querySelector(query);
+    document.onreadystatechange = function () {
+        let state = document.readyState;
+        if (state == 'interactive') { document.getElementsByClassName('body-inner').item(0).style.visibility = "hidden"; }
+        else if (state == 'complete') {
+            const loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
+            const THRESHOLD = 2000;
+            const MIN_LOAD_TIME = loadTime < THRESHOLD ? THRESHOLD : 0;
+            setTimeout(() => {
+                id$('loader-container').style.visibility = "hidden";
+                document.getElementsByClassName('body-inner').item(0).style.visibility = "visible";
+            }, MIN_LOAD_TIME);
+        }
+    }
+
+    // Move to page top on reload  
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
+</script>
+
+</html>
