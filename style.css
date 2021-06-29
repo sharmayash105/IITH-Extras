@@ -54,9 +54,8 @@ body::-webkit-scrollbar {
     height: 3px;
     width: 400px;
     background-color: #646464;
-    margin-top: 20px;
     justify-content: center;
-    margin-left: 5.4rem;
+    margin: 20px auto 0px;
 }
 
 @keyframes animate {
@@ -152,7 +151,10 @@ body::-webkit-scrollbar {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #aim h3{
@@ -174,6 +176,26 @@ body::-webkit-scrollbar {
     background-color: #ffffff;
     margin: 10px auto 0px;
 }
+#more, #less {
+    cursor: pointer;
+    display: none;
+    text-decoration: underline;
+}
+@media (max-width: 600px){
+    #aim h3 {
+        font-size: 3rem;
+    }
+    .aim-content p {
+        font-size: 1.5rem;
+    }
+    #expand, #less {
+        display: none;
+    }
+    #more {
+        display: inline;
+    }
+}
+
 .aim-content{
     font-size: 1.5rem;
     letter-spacing: 0.2rem;
@@ -188,12 +210,8 @@ body::-webkit-scrollbar {
     height: 3px;
     width: 50vw;
     background-color: #ffffff;
-    margin-top: 60px;
-    justify-content: center;
-    margin-left: 15rem;
+    margin: 60px auto 0px;
 }
-
-
 
 
 /* Main content deco */
@@ -249,6 +267,3 @@ body::-webkit-scrollbar {
     margin: 80px;
     padding-top: 6.5rem;
 }
-
-
-

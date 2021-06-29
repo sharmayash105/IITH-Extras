@@ -41,11 +41,14 @@
             <div class="aim-content">
                 <p>At IIT Hyderabad, we endeavor to help people grow as individuals. We strongly encourage our students
                     to pursue their passions with zeal and perseverance. We believe that doing what one enjoys
-                    contributes to one’s overall development and helps in discovering a better version of oneself. We
-                    can explore and adopt a variety of amazing, fascinating activities from around the world. Of all,
-                    because we are all individuals, our interests and hobbies vary. As a result, we're bringing this
-                    initiative forward to highlight the extraordinary qualities of individuals from IITH, in the hopes
-                    that it will inspire the rest of us to find our own calling in this productive path.</p>
+                    contributes to one’s overall development and helps in discovering a better version of oneself. <span
+                        id="more">more..</span><span id="expand"> We
+                        can explore and adopt a variety of amazing, fascinating activities from around the world. Hence,
+                        we bring this initiative forward,
+                        hoping that it will inspire the rest of us to find our own calling.
+                    </span><span id="less">less..</span>
+                    </section>
+                </p>
             </div>
         </div>
     </div>
@@ -143,6 +146,18 @@
     window.onbeforeunload = function () {
         window.scrollTo(0, 0);
     }
+</script>
+<script>
+    document.getElementById("more").addEventListener("click", () => {
+        document.getElementById("expand").style.display = "inline";
+        document.getElementById("more").style.display = "none";
+        document.getElementById("less").style.display = "inline";
+    })
+    document.getElementById("less").addEventListener("click", () => {
+        document.getElementById("expand").style.display = "none";
+        document.getElementById("more").style.display = "inline";
+        document.getElementById("less").style.display = "none";
+    })
 </script>
 
 </html>
