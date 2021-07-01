@@ -11,11 +11,14 @@
     <!-- AOS link -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Page top on reload -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <!-- =====Pre-Loader===== -->
+    <!-- Pre-Loader -->
     <div id="loader-container"></div>
+    <!-- Pre-Loader end -->
 
     <!-- Scroll button -->
     <div class="hero">
@@ -28,11 +31,13 @@
             </div>
         </a>
     </div>
+    <!-- Scroll button end -->
 
     <!-- Title -->
     <div class="container demo">
         <h1 class="main-title">IITH | EXTRAS</h1>
     </div>
+    <!-- Title end -->
 
     <!-- About Us -->
     <div id="aim">
@@ -41,9 +46,9 @@
             <div class="aim-content">
                 <p>At IIT Hyderabad, we endeavor to help people grow as individuals. We strongly encourage our students
                     to pursue their passions with zeal and perseverance. We believe that doing what one enjoys
-                    contributes to one’s overall development and helps in discovering a better version of oneself. <span
-                        id="more">more..</span><span id="expand"> We
-                        can explore and adopt a variety of amazing, fascinating activities from around the world. Hence,
+                    contributes to one’s overall development and helps in discovering a better version of oneself.
+                    <span id="more">more..</span><span id="expand">
+                        We can explore and adopt a variety of amazing, fascinating activities from around the world. Hence,
                         we bring this initiative forward,
                         hoping that it will inspire the rest of us to find our own calling.
                     </span><span id="less">less..</span>
@@ -52,6 +57,7 @@
             </div>
         </div>
     </div>
+    <!-- About Us end -->
 
     <!-- Main content -->
     <div id="main">
@@ -112,7 +118,9 @@
         </div>
 
     </div>
+    <!-- Main content end -->
 </body>
+
 <script>
     // AOS scripts
     AOS.init();
@@ -133,19 +141,30 @@
             }, MIN_LOAD_TIME);
         }
     }
-</script>
 
-<script>
-    document.getElementById("more").addEventListener("click", () => {
-        document.getElementById("expand").style.display = "inline";
-        document.getElementById("more").style.display = "none";
-        document.getElementById("less").style.display = "inline";
+    // for mobile view
+    document.getElementById('more').addEventListener("click", () => {
+        document.getElementById('expand').style.display = 'inline';
+        document.getElementById('less').style.display = "inline";
+        document.getElementById('more').style.display = 'none';
     })
-    document.getElementById("less").addEventListener("click", () => {
-        document.getElementById("expand").style.display = "none";
-        document.getElementById("more").style.display = "inline";
-        document.getElementById("less").style.display = "none";
+    document.getElementById('less').addEventListener('click', () => {
+        document.getElementById('less').style.display = "none";
+        document.getElementById('expand').style.display = "none";
+        document.getElementById('more').style.display = "inline";
     })
-</script>
 
+    // on page reload => scroll to top
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    }
+    // remove fragment as much as it can go without adding an entry in browser history:
+    window.location.replace("#");
+
+    // slice off the remaining '#' in HTML5:    
+    if (typeof window.history.replaceState == 'function') {
+        history.replaceState({}, '', window.location.href.slice(0, -1));
+    }
+
+</script>
 </html>
