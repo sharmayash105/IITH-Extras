@@ -32,6 +32,7 @@ body::-webkit-scrollbar {
     -o-background-size: cover;
     background-size: cover;
     height: 100vh;
+    width: 100vw;
 }
 
 /* Title and underline */
@@ -182,6 +183,18 @@ body::-webkit-scrollbar {
     text-decoration: underline;
 }
 @media (max-width: 600px){
+    .main-title {
+        font-size: 3rem;
+    }
+    .main-title:after{
+        content: "";
+        display: block;
+        height: 3px;
+        width: 350px;
+        background-color: #646464;
+        justify-content: center;
+        margin: 20px auto 0px;
+    }
     #aim h3 {
         font-size: 3rem;
     }
