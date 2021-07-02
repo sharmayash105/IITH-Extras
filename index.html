@@ -48,7 +48,8 @@
                     to pursue their passions with zeal and perseverance. We believe that doing what one enjoys
                     contributes to one’s overall development and helps in discovering a better version of oneself.
                     <span id="more">more..</span><span id="expand">
-                        We can explore and adopt a variety of amazing, fascinating activities from around the world. Hence,
+                        We can explore and adopt a variety of amazing, fascinating activities from around the world.
+                        Hence,
                         we bring this initiative forward,
                         hoping that it will inspire the rest of us to find our own calling.
                     </span><span id="less">less..</span>
@@ -66,105 +67,28 @@
         </div>
         <p class="talent">INCREDIBLE TALENTS OF IITH</p>
         <div class="cards">
-            <div data-aos="fade-right" class="card">
-                <div class="t1">
-                    <span>Name of the page</span>
+
+            <div data-aos="fade-right" class="card" id="card1">
+                <div class="initial">
+                    <div class="t1">
+                        <span>@anish.a2002 : Probably a photographer</span>
+                    </div>
+                    <div class="toggleDown" onclick="toggle(this)"></div>
                 </div>
-                <div class="toggle"></div>
-            </div>
-            <div data-aos="fade-left" class="card">
-                <div class="t1">
-                    <span>Name of the page</span>
+                <div class="feed">
+                    <script src="https://assets.juicer.io/embed.js" type="text/javascript"></script>
+                    <link href="https://assets.juicer.io/embed.css" media="all" rel="stylesheet" type="text/css" />
+                    <ul class="juicer-feed" data-feed-id="anish-a2002-9926a9a6-4f5a-4b40-8b9e-c887fbb6ae4b">
+                        <h1 class="referral"><a href="https://www.juicer.io">Powered by Juicer.io</a></h1>
+                    </ul>
                 </div>
-                <div class="toggle"></div>
             </div>
-            <div data-aos="fade-right" class="card">
-                <div class="t1">
-                    <span>Name of the page</span>
-                </div>
-                <div class="toggle"></div>
-            </div>
-            <div data-aos="fade-left" class="card">
-                <div class="t1">
-                    <span>Name of the page</span>
-                </div>
-                <div class="toggle"></div>
-            </div>
-            <div data-aos="fade-right" class="card">
-                <div class="t1">
-                    <span>Name of the Page</span>
-                </div>
-                <div class="toggle"></div>
-            </div>
-            <div data-aos="fade-left" class="card">
-                <div class="t1">
-                    <span>Name of the Page</span>
-                </div>
-                <div class="toggle"></div>
-            </div>
-            <div data-aos="fade-right" class="card">
-                <div class="t1">
-                    <span>Name of the Page</span>
-                </div>
-                <div class="toggle"></div>
-            </div>
-            <div data-aos="fade-left" class="card">
-                <div class="t1">
-                    <span>Name of the Page</span>
-                </div>
-                <div class="toggle"></div>
-            </div>
+
 
         </div>
 
     </div>
     <!-- Main content end -->
 </body>
-
-<script>
-    // AOS scripts
-    AOS.init();
-
-    // Preloader scripts
-    const id$ = (id) => document.getElementById(id);
-    const q$ = (query) => document.querySelector(query);
-    document.onreadystatechange = function () {
-        let state = document.readyState;
-        if (state == 'interactive') { document.getElementsByClassName('body-inner').item(0).style.visibility = "hidden"; }
-        else if (state == 'complete') {
-            const loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
-            const THRESHOLD = 2000;
-            const MIN_LOAD_TIME = loadTime < THRESHOLD ? THRESHOLD : 0;
-            setTimeout(() => {
-                id$('loader-container').style.visibility = "hidden";
-                document.getElementsByClassName('body-inner').item(0).style.visibility = "visible";
-            }, MIN_LOAD_TIME);
-        }
-    }
-
-    // for mobile view
-    document.getElementById('more').addEventListener("click", () => {
-        document.getElementById('expand').style.display = 'inline';
-        document.getElementById('less').style.display = "inline";
-        document.getElementById('more').style.display = 'none';
-    })
-    document.getElementById('less').addEventListener('click', () => {
-        document.getElementById('less').style.display = "none";
-        document.getElementById('expand').style.display = "none";
-        document.getElementById('more').style.display = "inline";
-    })
-
-    // on page reload => scroll to top
-    window.onbeforeunload = function () {
-        window.scrollTo(0, 0);
-    }
-    // remove fragment as much as it can go without adding an entry in browser history:
-    window.location.replace("#");
-
-    // slice off the remaining '#' in HTML5:    
-    if (typeof window.history.replaceState == 'function') {
-        history.replaceState({}, '', window.location.href.slice(0, -1));
-    }
-
-</script>
+<script src="app.js"></script>
 </html>

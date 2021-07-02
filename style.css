@@ -275,10 +275,17 @@ body::-webkit-scrollbar {
     border-radius: 20px;
     width: 80vw;
     margin: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 30px;
+    height: 6rem;
+    overflow: hidden;
+}
+
+.initial {
+    display: flex;
+}
+
+#card1 {
+    transition: height 0.8s ease;
 }
 
 .card:first-child {
@@ -290,7 +297,7 @@ body::-webkit-scrollbar {
     flex: 5;
 }
 
-.toggle {
+.toggleDown {
     transform: rotate(45deg);
     max-height: 20px;
     max-width: 20px;
@@ -300,4 +307,31 @@ body::-webkit-scrollbar {
     border-right: 1px solid black;
     flex: 1;
     margin-right: 20px;
+}
+
+.toggleUp {
+    transform: rotate(45deg);
+    max-height: 20px;
+    max-width: 20px;
+    height: 20px;
+    width: 20px;
+    border-top:1px solid black;
+    border-left: 1px solid black;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.toggled {
+    height: 60vh;
+}
+
+.feed {
+    margin-top: max(5rem,8vh);
+    height: 50vh;
+    overflow-y: auto;
+}
+
+span {
+    display: inline-block;
+    margin-top: 0.4rem;
 }
