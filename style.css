@@ -207,6 +207,12 @@ body::-webkit-scrollbar {
     #more {
         display: inline;
     }
+
+    .shortp{
+        font-size: 1.1rem;
+        margin-top: 5.5rem;
+    }
+
 }
 
 .aim-content{
@@ -250,7 +256,8 @@ body::-webkit-scrollbar {
     -webkit-transform: translate3d(-50%,-50%,0);
     transform: translate(-50%,-50%,0);
 }
-#main p{
+
+.shortp{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 1.4rem;
     position: absolute;
@@ -284,7 +291,7 @@ body::-webkit-scrollbar {
     display: flex;
 }
 
-#card1 {
+#card1, #card2 {
     transition: height 0.8s ease;
 }
 
@@ -293,12 +300,55 @@ body::-webkit-scrollbar {
 }
 
 .t1{
-    color: rgb(255, 255, 255);
+    color: rgb(206, 206, 206);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
     flex: 5;
+}
+
+.t1 .name{
+    margin: auto;
+    background-color: rgba(68, 68, 68, 0.35);
+    border: 1px solid transparent;
+    width: max-content;
+    border-radius: 4px;
+    top: 0;
+}
+.account{
+    color: rgb(206, 206, 206);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.3rem;
+    background-color: rgba(68, 68, 68, 0.35);
+    border: 1px solid transparent;
+    width: max-content;
+    border-radius: 4px;
+    margin: auto;
+}
+
+@media (max-width: 600px){
+    .t1{
+        justify-content: center;
+        text-align: center;
+        align-content: center;
+    }
+    .name{
+        display: inline;
+        font-size: 0.8rem;
+    }
+    .feed{
+        justify-content: center;
+        text-align: center;
+        align-content: center;
+    }
+    .account{
+        font-size: 0.6rem;
+        display: inline;
+    }
 }
 
 .toggleDown {
     transform: rotate(45deg);
+    transition: 0.5s ease;
     max-height: 20px;
     max-width: 20px;
     height: 20px;
@@ -307,6 +357,10 @@ body::-webkit-scrollbar {
     border-right: 1px solid black;
     flex: 1;
     margin-right: 20px;
+}
+
+.toggleDown, .toggleUp:hover{
+    cursor: pointer;
 }
 
 .toggleUp {
@@ -322,16 +376,25 @@ body::-webkit-scrollbar {
 }
 
 .toggled {
-    height: 60vh;
+    height: 85vh;
 }
 
 .feed {
-    margin-top: max(5rem,8vh);
-    height: 50vh;
+    margin-top: max(5rem,5vh);
+    height: 85vh;
     overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.feed::-webkit-scrollbar {
+    display: none;
 }
 
 span {
     display: inline-block;
     margin-top: 0.4rem;
+}
+
+.referral{
+    display: none;
 }
