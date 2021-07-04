@@ -306,22 +306,28 @@ body::-webkit-scrollbar {
     flex: 5;
 }
 
-.t1 .name{
+.name{
     margin: auto;
-    background-color: rgba(68, 68, 68, 0.35);
-    border: 1px solid transparent;
+    text-shadow: 2px 2px 3px #000000;
     width: max-content;
     border-radius: 4px;
     top: 0;
+}
+.name:after{
+    content: "";
+    display: block;
+    height: 3px;
+    width: max-content;
+    background-color: #000000;
+    justify-content: center;
+    margin: 20px auto 0px;
 }
 .account{
     color: rgb(206, 206, 206);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.3rem;
-    background-color: rgba(68, 68, 68, 0.35);
-    border: 1px solid transparent;
+    text-shadow: 2px 2px 3px #000000;
     width: max-content;
-    border-radius: 4px;
     margin: auto;
 }
 
@@ -344,6 +350,9 @@ body::-webkit-scrollbar {
         font-size: 0.6rem;
         display: inline;
     }
+    .nameLine::after{
+        display: none;
+    }
 }
 
 .toggleDown {
@@ -353,12 +362,11 @@ body::-webkit-scrollbar {
     max-width: 20px;
     height: 20px;
     width: 20px;
-    border-bottom:1px solid black;
-    border-right: 1px solid black;
+    border-bottom:2px solid black;
+    border-right: 2px solid black;
     flex: 1;
     margin-right: 20px;
 }
-
 .toggleDown, .toggleUp:hover{
     cursor: pointer;
 }
@@ -369,10 +377,20 @@ body::-webkit-scrollbar {
     max-width: 20px;
     height: 20px;
     width: 20px;
-    border-top:1px solid black;
-    border-left: 1px solid black;
+    border-top:2px solid black;
+    border-left: 2px solid black;
     flex: 1;
     margin-right: 20px;
+}
+
+.nameLine::after{
+    content: "";
+    display: block;
+    height: 0.2rem;
+    width: 4rem;
+    background-color: #ffffff91;
+    margin: 10px auto 0px;
+    box-shadow: 1px 1px 2px #000000;
 }
 
 .toggled {
@@ -397,8 +415,5 @@ span {
 
 .referral{
     display: none;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 36b209259c64f2e8a82583ace736a0a0643fef20
+
