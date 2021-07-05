@@ -6,14 +6,12 @@ const id$ = (id) => document.getElementById(id);
 const q$ = (query) => document.querySelector(query);
 document.onreadystatechange = function () {
     let state = document.readyState;
-    if (state == 'interactive') { document.getElementsByClassName('body-inner').item(0).style.visibility = "hidden"; }
-    else if (state == 'complete') {
+    if (state == 'complete') {
         const loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
         const THRESHOLD = 2000;
         const MIN_LOAD_TIME = loadTime < THRESHOLD ? THRESHOLD : 0;
         setTimeout(() => {
             id$('loader-container').style.visibility = "hidden";
-            document.getElementsByClassName('body-inner').item(0).style.visibility = "visible";
         }, MIN_LOAD_TIME);
     }
 }
