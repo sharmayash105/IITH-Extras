@@ -283,27 +283,25 @@ body::-webkit-scrollbar {
     width: 80vw;
     margin: 40px;
     padding: 30px;
-    height: 6rem;
+    height: 8rem;
     overflow: hidden;
+    transition: height 0.8s ease;
 }
 
 .initial {
     display: flex;
 }
 
-#card1, #card2 {
-    transition: height 0.8s ease;
-}
-
 .card:first-child {
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .t1{
     color: rgb(206, 206, 206);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.5rem;
     flex: 5;
+    min-width: 0;
+    overflow: hidden;
 }
 
 .name{
@@ -312,6 +310,8 @@ body::-webkit-scrollbar {
     width: max-content;
     border-radius: 4px;
     top: 0;
+    font-size: 1.2em;
+    overflow: ellipsis;
 }
 .name:after{
     content: "";
@@ -355,34 +355,27 @@ body::-webkit-scrollbar {
     }
 }
 
-.toggleDown {
-    transform: rotate(45deg);
-    transition: 0.5s ease;
-    max-height: 20px;
-    max-width: 20px;
-    height: 20px;
-    width: 20px;
-    border-bottom:2px solid black;
-    border-right: 2px solid black;
-    flex: 1;
-    margin-right: 20px;
-}
 .toggleDown, .toggleUp:hover{
     cursor: pointer;
 }
 
-.toggleUp {
+.toggle {
     transform: rotate(45deg);
     max-height: 20px;
     max-width: 20px;
     height: 20px;
     width: 20px;
+    flex: 1;
+    margin: 20px;
+}
+.toggleUp {
     border-top:2px solid black;
     border-left: 2px solid black;
-    flex: 1;
-    margin-right: 20px;
 }
-
+.toggleDown {
+    border-bottom:2px solid black;
+    border-right: 2px solid black;
+}
 .nameLine::after{
     content: "";
     display: block;
