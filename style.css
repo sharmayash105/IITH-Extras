@@ -160,14 +160,10 @@ body::-webkit-scrollbar {
 
 #aim h3{
     font-size: 4rem;
-    position: absolute;
     color: rgb(189, 189, 189);
     text-shadow: rgb(0, 0, 0) 1px 1px;
     text-align: center;
-    top: 120%;
-    left: 50%;
-    -webkit-transform: translate3d(-50%,-50%,0);
-    transform: translate(-50%,-50%,0);
+    margin-top: 25px;
 }
 #aim h3::after{
     content: "";
@@ -219,7 +215,6 @@ body::-webkit-scrollbar {
     font-size: 1.5rem;
     letter-spacing: 0.2rem;
     padding: 5rem;
-    padding-top: 15rem;
     text-align: center;
     color: white;
 }
@@ -239,6 +234,10 @@ body::-webkit-scrollbar {
     width: 100vw;
     height: max-content;
     padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
 }
 
 .talent{
@@ -249,25 +248,17 @@ body::-webkit-scrollbar {
 .talent h3{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 3rem;
-    position: absolute;
     color: rgb(182, 182, 182);
     text-align: center;
     margin-top: 3rem;
-    left: 50%;
-    -webkit-transform: translate3d(-50%,-50%,0);
-    transform: translate(-50%,-50%,0);
 }
 
 .shortp{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 1.4rem;
-    position: absolute;
     color: rgb(182, 182, 182);
     text-align: center;
     margin-top: 4.5rem;
-    left: 50%;
-    -webkit-transform: translate3d(-50%,-50%,0);
-    transform: translate(-50%,-50%,0);
 }
 
 .cards{
@@ -284,7 +275,7 @@ body::-webkit-scrollbar {
     width: 80vw;
     margin: 40px;
     padding: 30px;
-    height: 8rem;
+    height: 5rem;
     overflow: hidden;
     transition: height 0.8s ease;
 }
@@ -356,6 +347,18 @@ body::-webkit-scrollbar {
     }
 }
 
+@media (max-width: 400px){
+    .aim-content {
+        padding: 2.4rem;
+        letter-spacing: 0;
+    }
+    .talent h3{
+        font-size: 2.4rem;
+    }
+    .shortp {
+        font-size: 1.2rem;
+    }
+}
 .toggleDown, .toggleUp:hover{
     cursor: pointer;
 }
@@ -367,7 +370,7 @@ body::-webkit-scrollbar {
     height: 20px;
     width: 20px;
     flex: 1;
-    margin: 20px;
+    /* margin: 10px; */
 }
 .toggleUp {
     border-top:2px solid black;
@@ -377,22 +380,12 @@ body::-webkit-scrollbar {
     border-bottom:2px solid black;
     border-right: 2px solid black;
 }
-.nameLine::after{
-    content: "";
-    display: block;
-    height: 0.2rem;
-    width: 4rem;
-    background-color: #ffffff91;
-    margin: 10px auto 0px;
-    box-shadow: 1px 1px 2px #000000;
-}
 
 .toggled {
-    height: 85vh;
+    height: 60vh;
 }
 
 .feed {
-    margin-top: max(5rem,5vh);
     height: 85vh;
     overflow-y: auto;
     -ms-overflow-style: none;
@@ -418,15 +411,13 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* background-color: rgb(37, 37, 37); */
     padding-top: 24px;
-        background: url(bg4.jpg) no-repeat center center fixed; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        width: 100vw;
-    
+    background: url(bg4.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100vw;
 }
 footer > div {
     color: #cacaca;
@@ -449,4 +440,3 @@ footer a:hover {
     font-size: 12px;
     padding: 5px;
 }
-
